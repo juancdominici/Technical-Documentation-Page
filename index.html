@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Technical Documentation Page
+    </title>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">  
+        <nav id="navbar">
+            <header>
+                Herencia en CSS
+            </header>
+            <ul>
+                <li><a href="#resumen" class="nav-link">Resumen</a></li>
+                <li><a href="#propiedades_heredadas" class="nav-link">Propiedades heredadas</a></li>
+                <li><a href="#propiedades_no_heredadas" class="nav-link">Propiedades no heredadas</a></li>
+                <li><a href="#notas" class="nav-link">Notas</a></li>
+                <li><a href="#ver_tambien" class="nav-link">Ver también</a></li>
+            </ul>
+        </nav>
+    </head>
+    <main id="main-doc">
+        <section class="main-section" id="resumen">
+            <header>
+                Resumen
+            </header>
+            <p>
+                El resumen de cada definición de propiedad CSS indica si esa propiedad es heredada por defecto ("Inherit: Yes") o no ("Inherit: no"). 
+                Esto controla lo que sucede al no especificar un valor concreto para una propiedad de un elemento.
+            </p>
+            <ul>
+                <li>
+                    CSS significa hojas de estilo en cascada (cascading style sheets), y es muy importante entender la palabra cascada. 
+                </li>
+                <li>
+                    La forma en que se comporta es la clave para comprender el CSS.
+                </li>
+                <li>
+                    La cascada, y el concepto de especificidad, que está estrechamente relacionado con aquel, son mecanismos que controlan qué regla se aplica cuando aparecen tales conflictos.
+                </li>
+                <li>
+                    Es posible que la regla que da estilo a tu elemento no sea la que esperas, por lo que debes comprender cómo funcionan estos mecanismos.
+                </li>
+                <li>
+                    También es significativo el concepto de herencia, que significa que algunas propiedades CSS heredan por defecto los valores establecidos en el elemento padre, pero otras no.
+                </li>
+            </ul>
+        </section>
+        <section class="main-section" id="propiedades_heredadas">
+            <header>
+                Propiedades heredadas
+            </header>
+            <p>
+                Cuando no se especifica un valor para un elemento de una propiedad inherited property, el elemento toma el <code>valor calculado</code> de la propiedad de su elemento padre. 
+                Sólo los elementos raíz de un documento obtienen el valor <code>inicial</code> dado en el resumen de la propiedad.
+            </p>
+            <p>
+                Un ejemplo característico de una propiedad heredada es la propiedad <code>color</code>. Definida con las siguientes reglas de estilo:
+            </p>
+            <code id="codeline">
+                p { color: green }
+            </code>
+            <p>y el codigo HTML siguiente:</p>
+            <code id="codeline">
+                &lt;p&gt;Este párrafo tiene &lt;em&gt;texto enfatizado&lt;/em&gt; en su interior.&lt;/p&gt;
+            </code>
+            <p>
+                las palabras "texto enfatizado" aparecerá en verde, ya que el elemento em ha heredado el valor de la propiedad <code>color</code> a partir del elemento <code>p</code>.
+                No recoge el valor inicial de la propiedad (que es el color que es usado por el elemento raíz cuando la página especifica que no hay color).
+            </p>
+        </section>
+        <section class="main-section" id= "propiedades_no_heredadas">
+            <header>
+                Propiedades no heredadas
+            </header>
+            <p>
+                Si no se especifica un valor para una propiedad no heredada (non-inherited property) 
+                (a veces llamada reset property en el código Mozilla), el elemento toma el valor <code>inicial</code> de dicha propiedad (como se especifica en el resumen de ésa propiedad).
+            </p>
+            <p>
+                Un ejemplo característico de una propiedad no heredada es la del <code>borde</code>. Definida con las siguientes reglas de estilo:
+            </p>
+            <code id="codeline">
+                p { border: medium solid }
+            </code>
+            <p>
+                y la etiqueta HTML:
+            </p>
+            <code id="codeline">
+                &lt;p&gt;Este párrafo tiene &lt;em&gt;texto enfatizado&lt;/em&gt; en su interior.&lt;/p&gt;
+            </code>
+            <p>
+                las palabras "texto enfatizado" no tendrán borde (ya que el valor inicial del estilo de borde es none).
+            </p>
+        </section>
+        <section class="main-section" id="notas">
+            <header>
+                Notas
+            </header>
+            <p>
+                Las palabras de código <code>inherit</code> permiten al autor definir, explícitamente, la posibilidad de herencia. 
+                Funciona para las propiedades heredadas y las no heredadas.
+            </p>
+        </section>
+        <section class="main-section" id="ver_tambien">
+            <header>
+                Ver también
+            </header>
+            <p>
+                <code> <a href="">inherit</a>, <a href="">valor inicial</a></code>
+            </p>
+        </section>
+        
+    </main>
+</html>
