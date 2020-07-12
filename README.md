@@ -1,3 +1,4 @@
-# technical-documentation-page-example
- Example created for freeCodeCamp project detailing a technical documentation page.
-# Technical-Documentation-Page
+
+# Technical Documentation Page Example
+ 
+ Created for freeCodeCamp project detailing a technical documentation page.
